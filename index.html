@@ -1,0 +1,14 @@
+---
+layout: index
+title: "Aclevo Corporate"
+subtitle: "Table Of Contents"
+---
+
+{% for category in site.categories %}
+  <h3>{{ category[0] }}</h3>
+  <ul>
+    {% for post in category[1] %}
+      <li><b><a href="{{ post.url }}">&sect; {{ post.title }}</a></b></li>
+    {% endfor %}
+  </ul>
+{% endfor %}
